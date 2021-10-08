@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import { Divider, InputBase, Paper } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-import { getMotorData } from '../api'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -81,15 +80,15 @@ export default function MotorForm() {
         let regNo = regNumber.split('');
         const regres = regNo.filter((item) => item !== '-')
         const res = regres.join("").toUpperCase()
-        const data = getMotorData(res, 'xpc');
-        console.log(data);
-        if(data !== "error") {
+        // const data = getMotorData(res, 'xpc');
+        // console.log(data);
+        // if(data !== "error") {
             
-            setError(true)
-        }
-        else {
-            setError(false)
-        }
+        //     setError(true)
+        // }
+        // else {
+        //     setError(false)
+        // }
     } 
 
     return (
